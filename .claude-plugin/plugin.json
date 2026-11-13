@@ -1,0 +1,11 @@
+{
+  "name": "wrap",
+  "version": "1.0.0",
+  "description": "/wrap — end-of-session routine: tests gate, diff review, changelog, commit, push, resumption note, memory sync",
+  "author": {
+    "name": "Kiko Stefanov",
+    "url": "https://github.com/kikostefanov-lab"
+  },
+  "homepage": "https://github.com/kikostefanov-lab/claude-wrap",
+  "license": "MIT"
+}

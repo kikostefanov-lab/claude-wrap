@@ -1,0 +1,22 @@
+{
+  "$schema": "https://anthropic.com/claude-code/marketplace.schema.json",
+  "name": "claude-wrap",
+  "version": "1.0.0",
+  "owner": {
+    "name": "Kiko Stefanov",
+    "url": "https://github.com/kikostefanov-lab"
+  },
+  "metadata": {
+    "description": "The /wrap end-of-session command for Claude Code."
+  },
+  "plugins": [
+    {
+      "name": "wrap",
+      "source": "./",
+      "description": "/wrap — end-of-session routine: tests gate, diff review, changelog, commit, push, resumption note, memory sync",
+      "version": "1.0.0",
+      "category": "productivity",
+      "license": "MIT"
+    }
+  ]
+}
