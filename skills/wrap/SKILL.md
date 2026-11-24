@@ -11,8 +11,12 @@ says so.
 
 ## Pick the mode
 
-Arguments, if your tool passes them: `$ARGUMENTS`. If that still reads literally as `$ARGUMENTS`,
-your tool does not substitute it, so take the mode from the user's request instead.
+Arguments, if your tool passes them:
+
+> $ARGUMENTS
+
+If the quoted line above is empty, or shows a `$`-prefixed placeholder name instead of real words,
+your tool passed no arguments: take the mode from the user's request instead.
 
 - **Full wrap** (no arguments, or "wrap up"): the work is at a stopping point. Gate on tests,
   record, commit, push.

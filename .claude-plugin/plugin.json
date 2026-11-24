@@ -1,6 +1,6 @@
 {
   "name": "wrap",
-  "version": "1.2.0",
+  "version": "1.2.1",
   "description": "/wrap — end-of-session routine for Claude Code and Codex: tests gate, diff review, changelog, resumption note, memory sync, commit, push. Handoff mode for mid-task context breaks",
   "author": {
     "name": "Kiko Stefanov",

@@ -1,7 +1,7 @@
 {
   "$schema": "https://anthropic.com/claude-code/marketplace.schema.json",
   "name": "claude-wrap",
-  "version": "1.2.0",
+  "version": "1.2.1",
   "owner": {
     "name": "Kiko Stefanov",
     "url": "https://github.com/kikostefanov-lab"
@@ -14,7 +14,7 @@
       "name": "wrap",
       "source": "./",
       "description": "/wrap — end-of-session routine for Claude Code and Codex: tests gate, diff review, changelog, resumption note, memory sync, commit, push. Handoff mode for mid-task context breaks",
-      "version": "1.2.0",
+      "version": "1.2.1",
       "category": "productivity",
       "license": "MIT"
     }

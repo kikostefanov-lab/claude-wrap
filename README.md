@@ -1,6 +1,6 @@
 # claude-wrap
 
-**Version 1.2.0** | The `/wrap` end-of-session skill for Claude Code and Codex.
+**Version 1.2.1** | The `/wrap` end-of-session skill for Claude Code and Codex.
 
 Run `/wrap` (Claude Code) or `$wrap` (Codex) when you finish a work session. The agent works
 through, in order:
@@ -106,6 +106,7 @@ codex plugin add wrap@claude-wrap
 
 | Version | Changes |
 |---|---|
+| 1.2.1 | Fixes the mode check. Claude Code replaces the arguments placeholder everywhere it appears in the skill, so the old "does it still read as the placeholder?" test was compared against its own substituted value. The placeholder now appears once, and the check is "empty, or still a `$` placeholder". |
 | 1.2.0 | Works in Codex as well as Claude Code. The command is now a shared skill (`skills/wrap/SKILL.md`) with Codex manifests (`plugin.json`, `.agents/plugins/marketplace.json`) next to the Claude Code ones. The note is pointed to from AGENTS.md as well as imported by CLAUDE.md. Memory sync, the attribution trailer and push now each cover the tool that lacks the feature: Codex has no memory store, the trailer may be unset, and Codex's sandbox can block the network. |
 | 1.1.0 | Adds `/wrap handoff` for mid-task breaks (no tests block, no commit or push). The resumption note now has a fixed home (`HANDOFF.md`, imported from CLAUDE.md, unless the project already keeps a "next session" section) and a fixed structure: Verify first, Deferred, Decisions and why, and Tried and rejected. The note and memory sync now run before the commit, so the note is committed and pushed. Unfixable test failures stop the wrap and go to Deferred instead of being dropped. |
 | 1.0.0 | First release as a plugin. Moved from a local `~/.claude/commands/wrap.md`; the commit step now uses the attribution trailer your setup specifies instead of a hard-coded model name. |
