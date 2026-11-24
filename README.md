@@ -65,10 +65,42 @@ in a Codex session has not been tested yet.
 
 ## Updating
 
+### Publishing a new version
+
 Edit `skills/wrap/SKILL.md`. Bump the version in `plugin.json`, `.claude-plugin/plugin.json`, both
 `version` fields of `.claude-plugin/marketplace.json`, and the **Version** line above, add a line
-to the history below, commit and push. Then, in Claude Code, `/plugin marketplace update
-claude-wrap` and `/reload-plugins`; in Codex, `codex plugin marketplace upgrade`.
+to the history below, commit and push.
+
+### Getting the new version
+
+Updating a marketplace only downloads the latest list of plugins. It does **not** upgrade the copy
+you have installed, so each tool needs two steps.
+
+**Claude Code**, from a shell (the `/plugin` menu does not work in the desktop app):
+
+```
+claude plugin marketplace update claude-wrap
+```
+
+```
+claude plugin update wrap@claude-wrap
+```
+
+Then start a new session or run `/reload-plugins`. Check with `claude plugin list`, which shows the
+installed version.
+
+In the terminal CLI you can use `/plugin marketplace update claude-wrap`, and then update `wrap`
+from the `/plugin` menu.
+
+**Codex:**
+
+```
+codex plugin marketplace upgrade claude-wrap
+```
+
+```
+codex plugin add wrap@claude-wrap
+```
 
 ## Version history
 
