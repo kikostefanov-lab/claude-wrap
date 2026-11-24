@@ -1,0 +1,15 @@
+{
+  "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+  "name": "wrap",
+  "version": "1.2.0",
+  "description": "/wrap — end-of-session routine for Claude Code and Codex: tests gate, diff review, changelog, resumption note, memory sync, commit, push. Handoff mode for mid-task context breaks",
+  "author": {
+    "name": "Kiko Stefanov",
+    "url": "https://github.com/kikostefanov-lab"
+  },
+  "homepage": "https://github.com/kikostefanov-lab/claude-wrap",
+  "repository": "https://github.com/kikostefanov-lab/claude-wrap",
+  "license": "MIT",
+  "keywords": ["session", "handoff", "git", "changelog"],
+  "skills": "./skills/"
+}
